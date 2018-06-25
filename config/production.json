@@ -1,0 +1,4 @@
+{
+  "databaseURL": "mongodb://mervin:mervin123!@ds117691.mlab.com:17691/petweather",
+  "port": 3000
+}
