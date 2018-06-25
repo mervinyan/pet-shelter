@@ -1,0 +1,4 @@
+{
+  "databaseURL": "mongodb://localhost:27017/petweather-test",
+  "port": 3000
+}
