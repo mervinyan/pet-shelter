@@ -4,6 +4,10 @@ const PetType = require('../models/pettype');
 exports.getBreeds = function (req, res, next) {
   Breed
     .find({})
+    .populate({
+      path: 'type',
+      select: 'name'
+    })
     .exec((err, breeds) => {
       if (err) {
         res.send({ error: err });
@@ -18,6 +22,10 @@ exports.getBreedsByPetTypeId = function (req, res, next) {
 
   Breed
     .find({ type: petTypeId })
+    .populate({
+      path: 'type',
+      select: 'name'
+    })
     .exec((err, breeds) => {
       if (err) {
         res.send({ error: err });
