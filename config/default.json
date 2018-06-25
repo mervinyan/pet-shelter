@@ -1,4 +1,4 @@
 {
-  "databaseURL": "mongodb://mervin:mervin123!@ds217351.mlab.com:17351/heroku_wxxghdf1",
+  "databaseURL": "mongodb://mervin:mervin123!@ds117691.mlab.com:17691/petweather",
   "port": 3000
 }
