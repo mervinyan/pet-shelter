@@ -18,7 +18,7 @@ const store = new MongoDBStore({
 const chalk = require('chalk');
 
 mongoose.Promise = require('bluebird');
-mongoose.connect(config.databaseURL);
+mongoose.connect(process.env.MONGODB_URI || config.databaseURL);
 
 if (config.util.getEnv('NODE_ENV') !== 'test') {
     app.use(morgan('combined'));
