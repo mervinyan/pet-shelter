@@ -25,8 +25,8 @@ if (config.util.getEnv('NODE_ENV') !== 'test') {
 }
 // console.log(chalk.green(`Starting express server in ${environment} mode...`));
 
-const server = app.listen(config.port);
-console.log(chalk.green('Pet Shelter is running on port ' + config.port + '.'));
+const server = app.listen(process.env.PORT || 8080 );
+console.log(chalk.green('Pet Shelter is running.'));
 
 app.use(session({
     secret: 'petweather secret key',
